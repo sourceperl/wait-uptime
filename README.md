@@ -6,15 +6,21 @@ A lightweight utility to delay execution until a specific system uptime threshol
 ### From GitHub
 
 ```bash
-pipx install git+https://github.com/sourceperl/wait-uptime.git
+# add pipx tool (execute binaries from Python packages in isolated environments)
+sudo apt install -y pipx
+
+# system wide
+sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install git+https://github.com/sourceperl/wait-uptime.git
 ```
 
-### From source
+
+## Use Cases
+
+### Bash
 
 ```bash
-git clone https://github.com/sourceperl/wait-uptime.git
-cd wait-uptime
-pip install .
+# delay backup 5 minutes after system startup
+/usr/local/bin/wait-uptime 5m && /usr/local/bin/backup.sh
 ```
 
 
@@ -68,6 +74,7 @@ Examples: `30`, `30s`, `5m`, `2h`, `1.5h`, `90s`
 - `1` - Error (invalid arguments, uptime read failure)
 - `2` - Timeout (waited too long)
 - `130` - User interrupted (Ctrl+C)
+
 
 ## Platform Support
 
