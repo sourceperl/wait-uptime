@@ -6,7 +6,7 @@ A lightweight utility to delay execution until a specific system uptime threshol
 ### From GitHub
 
 ```bash
-pipx install git+https://github.com/votre-utilisateur/wait-uptime.git
+pipx install git+https://github.com/sourceperl/wait-uptime.git
 ```
 
 ### From source
