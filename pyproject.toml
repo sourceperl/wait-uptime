@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wait-uptime"
+dynamic = ["dependencies", "version"]
+license = { text = "MIT" }
+authors = [{ name = "Loïc Lefebvre" }]
+description = "Wait for system uptime to reach a specified threshold"
+requires-python = ">=3.8"
+
+[project.scripts]
+wait-uptime = "wait_uptime:main"
+
+[project.urls]
+Homepage = "https://github.com/sourceperl/wait-uptime/"
+
+[tool.setuptools]
+packages = ["wait_uptime"]
+dynamic.version = { attr = "wait_uptime.__version__" }
